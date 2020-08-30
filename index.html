@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style media="screen">
+      .button{
+        margin-left: 10px;
+      }
+      body{
+        margin-top: 280px;
+      }
+    </style>
+    <meta charset="utf-8">
+    <title>Javascript</title>
+  </head>
+  <body id = "bg" style="text-align: center;">
+    <h1>Background Color Changer</h1>
+    <button type="button" style="background-color:red" onclick='document.getElementById("bg").style.backgroundColor="red"'>RED</button>
+    <button type="button" style="background-color:green" onclick='document.getElementById("bg").style.backgroundColor="green"'>GREEN</button>
+    <button type="button" style="background-color:blue" onclick='document.getElementById("bg").style.backgroundColor="blue"'>BLUE</button><br><br><br>
+    <form class="" action="index.html" method="post">
+      <label>Color Name</label>
+      <input  id="color" type="text" name="" value=""><button class = "button" type="button" onclick="chcolor()" id = "clr" name="button">Change color</button><br><br>
+      <label>HEX Value</label>
+      <input id="hex" type="text" name="" value=""><button class = "button" type="button" onclick="chhex()" id = "hx" name="button">Change color</button><br><br>
+      <input type="color" id="clr1"><button type="button" class = "button" name="Change" onclick="inp_clr()">Change</button>
+    </form>
+    <h1>Counter</h1>
+    <button  onclick="sub()" type="button" name="button">-</button>
+    <input id="counter" type="text" name="" value="0">
+    <button  onclick="add()" type="button" name="button">+</button>
+
+  </body>
+
+  <script>
+      function add()
+      {
+        var n = document.getElementById("counter").value;
+        document.getElementById("counter").value = ++n;
+      }
+
+      function sub()
+      {
+        var n = document.getElementById("counter").value;
+        document.getElementById("counter").value = --n;
+      }
+
+      function inp_clr()
+      {
+        var c = document.getElementById("clr1").value;
+        document.getElementById("bg").style.backgroundColor=c;
+      }
+
+      function chcolor()
+      {
+        var color = document.getElementById("color").value;
+        document.getElementById("bg").style.backgroundColor=color;
+        document.getElementById("clr").style.backgroundColor=color;
+      }
+      function chhex()
+      {
+        var hex = document.getElementById("hex").value;
+        document.getElementById("bg").style.backgroundColor=hex;
+        document.getElementById("hx").style.backgroundColor=hex;
+      }
+  </script>
+
+</html>
